@@ -1,0 +1,36 @@
+﻿left off:
+https://dev.to/robinvanderknaap/setting-up-an-authorization-server-with-openiddict-part-ii-create-aspnet-project-4949
+https://dev.to/robinvanderknaap/setting-up-an-authorization-server-with-openiddict-part-iv-authorization-code-flow-3eh8
+
+Tutorials:
+https://procodeguide.com/programming/aspnet-core-security/
+https://procodeguide.com/programming/aspnet-core-identity-roles-authorization/
+https://procodeguide.com/programming/aspnet-core-identity-claims/
+https://codewithmukesh.com/blog/user-management-in-aspnet-core-mvc/
+https://github.com/iammukeshm/CustomUserManagement.MVC/blob/master/UserManagement.MVC/Areas/Identity/Pages/Account/Manage/Index.cshtml.cs
+
+Roles:
+https://stackoverflow.com/questions/67808674/openiddict-roles-policy-returns-403-forbidden
+MS: https://learn.microsoft.com/en-us/aspnet/core/security/authorization/roles?view=aspnetcore-8.0
+
+OpenIdDict:
+https://documentation.openiddict.com/configuration/application-permissions.html
+https://github.com/openiddict/openiddict-samples/tree/dev/samples
+
+PixelIdentity:
+https://nfactor26.github.io/pixel-identity/
+https://github.com/Nfactor26/pixel-identity
+
+
+Scaffolding:
+https://learn.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-7.0&tabs=visual-studio
+dotnet tool install dotnet-ef --global --prerelease
+dotnet tool update dotnet-ef --global --prerelease
+
+Add Email support for SendGrid:
+https://learn.microsoft.com/en-us/aspnet/core/security/authentication/accconfirm?view=aspnetcore-8.0&source=recommendations&tabs=visual-studio
+
+https://learn.microsoft.com/en-us/aspnet/core/security/authentication/customize-identity-model?view=aspnetcore-8.0
+
+Issues:
+https://copyprogramming.com/howto/signinmanager-passwordsigninasync-succeeds-but-user-identity-isauthenticated-is-false

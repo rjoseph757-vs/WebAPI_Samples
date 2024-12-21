@@ -1,0 +1,192 @@
+﻿# For more info on HTTP files go to https://aka.ms/vs/httpfile
+@Web_HostAddress = https://localhost:7087
+
+@Username=superadmin@localhost
+@Email=superadmin@localhost
+@Password=SuperAdmin1!
+@BearerToken=CfDJ8JHizPP20BBJso-7xVg0ItYdTj3PIMPcG67yNRrevJ0T0i4cSnmJDLsMp70DFMntCymLGGymS42oe0Rf1ae3Z8z4uFqx2GZphqIo3q6gmWP60Gh5N42luguLy6K_KbYPYgcZLECnE4aXv87wCGNleVaEJvsWqsLYB-VU7t6TuWLFx2Za1H2pg6PuizPvFSGb_-uFRmlzjeNisBPycZt9SgIqPkihDX5YfmmpUgT-7GRuCS2V8NqltGfXnLUdEU12tFuw2f8X67GoWm6MZB9UIpIkwyn0cLwAqiuSd4jLtQzf8vNBjj0TTCm-MerHclR5wX6A7T2VOmD0z-bv2-oRPKxqVkYSWJcyerBsyYhWQpDFVrUj3hAmcV6CqAf-1tEgYkfssbs8nTHV1Pz6IaBZAmCpEyjMrSkFor_ksvhjRa_DeCWIWCf9CN4IdWV7YAnHPZ0pxx0ptph0sEo53LuffXmH0mDPrDypXvQqaQDCf0-Ib1FgRWGQHPded_sp3Zj_qq5r4BfKmCAX-gO7PAMVEZtbRF9gGD6RfleGAUV6EhdVQoT4kQKfb2ibVvZfzEwNbPT4YH2xalk26NkCEx-NJyfSN9dQscLhSIJzEzuhQNVz031ddmeNzuDkvsuIM2OftjADv9_G3qB032ecoQE0eLRYk1cSUyQKJmoYk-iFqVrzaMFAtV1j3m8RG0p_UVIFKpgrABTLY3HxaqzbhBFtr_byWAMPNyhRVUjhlkatbTti5ME8J6g_DkT_HJZR5HjpLx-ap_4hwju6qDutWIyyd8AQlD50WlTvJQcc5bGdQ5bO-QHXFgacTnWTTfYzen6jog
+
+# POST Users Login
+POST {{Web_HostAddress}}/api/login
+Content-Type: application/json
+
+{
+  "email": "superadmin@localhost",
+  "password": "SuperAdmin1!"
+}
+
+###
+
+GET {{Web_HostAddress}}/v1/api/foo
+Authorization: Bearer {{BearerToken}}
+
+###
+GET {{Web_HostAddress}}/SuperAdminOnly
+Authorization: Bearer {{BearerToken}}
+
+
+
+# POST Users Register
+# POST {{Web_HostAddress}}/api/Users/Register
+# Content-Type: application/json
+
+# {
+#   "username": "{{Username}}",
+#   "password": "{{Password}}"
+# }
+
+# POST Users Register
+POST {{Web_HostAddress}}/api/Users/Register
+Content-Type: application/json
+
+{
+  "email": "{{Email}}",
+  "password": "{{Password}}"
+}
+
+###
+
+# POST Users Login
+# MS Changed to email instead of username!!!!
+# POST {{Web_HostAddress}}/api/Users/Login
+# Content-Type: application/json
+
+# {
+#   "username": "{{Username}}",
+#   "password": "{{Password}}"
+# }
+
+# POST Users Login
+POST {{Web_HostAddress}}/api/Users/Login
+Content-Type: application/json
+
+{
+  "email": "{{Email}}",
+  "password": "{{Password}}"
+}
+
+###
+
+# POST Users Refresh
+POST {{Web_HostAddress}}/api/Users/Refresh
+Authorization: Bearer {{BearerToken}}
+Content-Type: application/json
+
+{
+  "refreshToken": ""
+}
+
+###
+
+# GET WeatherForecast
+GET {{Web_HostAddress}}/v1/api/WeatherForecasts
+Authorization: Bearer {{BearerToken}}
+
+###
+
+# GET TodoLists
+GET {{Web_HostAddress}}/v1/api/TodoLists
+Authorization: Bearer {{BearerToken}}
+
+###
+
+# POST TodoLists
+POST {{Web_HostAddress}}/v1/api/TodoLists
+Authorization: Bearer {{BearerToken}}
+Content-Type: application/json
+
+// CreateTodoListCommand
+{
+  "Title": "Backlog"
+}
+
+###
+
+# PUT TodoLists
+PUT {{Web_HostAddress}}/v1/api/TodoLists/1
+Authorization: Bearer {{BearerToken}}
+Content-Type: application/json
+
+// UpdateTodoListCommand
+{
+  "Id": 1,
+  "Title": "Product Backlog"
+}
+
+###
+
+# DELETE TodoLists
+DELETE {{Web_HostAddress}}/v1/api/TodoLists/1
+Authorization: Bearer {{BearerToken}}
+
+###
+
+# GET TodoItems
+@PageNumber = 1
+@PageSize = 10
+GET {{Web_HostAddress}}/v1/api/TodoItems?ListId=1&PageNumber={{PageNumber}}&PageSize={{PageSize}}
+
+Authorization: Bearer {{BearerToken}}
+
+###
+
+# POST TodoItems
+POST {{Web_HostAddress}}/v1/api/TodoItems
+Authorization: Bearer {{BearerToken}}
+Content-Type: application/json
+
+// CreateTodoItemCommand
+{
+  "ListId": 1,
+  "Title": "Eat a burrito 🌯"
+}
+
+###
+
+#PUT TodoItems UpdateItemDetails
+PUT {{Web_HostAddress}}/v1/api/TodoItems/UpdateItemDetails/1
+Authorization: Bearer {{BearerToken}}
+Content-Type: application/json
+
+// UpdateTodoItemDetailCommand
+{
+  "Id": 1,
+  "ListId": 1,
+  "Priority": 3,
+  "Note": "This is a good idea!"
+}
+
+# #PUT TodoItems UpdateItemDetails
+# PUT {{Web_HostAddress}}/v1/api/TodoItems/UpdateItemDetails?Id=1
+# Authorization: Bearer {{BearerToken}}
+# Content-Type: application/json
+
+# // UpdateTodoItemDetailCommand
+# {
+#   "Id": 1,
+#   "ListId": 1,
+#   "Priority": 3,
+#   "Note": "This is a good idea!"
+# }
+
+###
+
+# PUT TodoItems
+PUT {{Web_HostAddress}}/v1/api/TodoItems/1
+Authorization: Bearer {{BearerToken}}
+Content-Type: application/json
+
+// UpdateTodoItemCommand
+{
+  "Id": 1,
+  "Title": "Eat a yummy burrito 🌯",
+  "Done": true
+}
+
+###
+
+# DELETE TodoItem
+DELETE {{Web_HostAddress}}/v1/api/TodoItems/1
+Authorization: Bearer {{BearerToken}}
+
+###

@@ -1,0 +1,32 @@
+﻿Left off:
+https://www.c-sharpcorner.com/article/securing-asp-net-core-web-api-with-jwt-authentication-and-role-based-authorizati/
+
+Tutorials:
+https://procodeguide.com/programming/aspnet-core-security/
+https://procodeguide.com/programming/aspnet-core-identity-roles-authorization/
+https://procodeguide.com/programming/aspnet-core-identity-claims/
+https://codewithmukesh.com/blog/user-management-in-aspnet-core-mvc/
+https://github.com/iammukeshm/CustomUserManagement.MVC/blob/master/UserManagement.MVC/Areas/Identity/Pages/Account/Manage/Index.cshtml.cs
+
+Roles:
+https://stackoverflow.com/questions/67808674/openiddict-roles-policy-returns-403-forbidden
+MS: https://learn.microsoft.com/en-us/aspnet/core/security/authorization/roles?view=aspnetcore-8.0
+
+Scaffolding:
+https://learn.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-7.0&tabs=visual-studio
+dotnet tool install dotnet-ef --global --prerelease
+dotnet tool update dotnet-ef --global --prerelease
+
+Add Email support for SendGrid:
+https://learn.microsoft.com/en-us/aspnet/core/security/authentication/accconfirm?view=aspnetcore-8.0&source=recommendations&tabs=visual-studio
+
+https://learn.microsoft.com/en-us/aspnet/core/security/authentication/customize-identity-model?view=aspnetcore-8.0
+
+Issues:
+https://copyprogramming.com/howto/signinmanager-passwordsigninasync-succeeds-but-user-identity-isauthenticated-is-false
+
+Multiple Authentications in Web API:
+https://weblog.west-wind.com/posts/2022/Mar/29/Combining-Bearer-Token-and-Cookie-Auth-in-ASPNET
+https://github.com/dotnet/aspnetcore/issues/15138https://github.com/dotnet/aspnetcore/issues/15138
+https://stackoverflow.com/questions/63228070/identity-server-check-if-user-is-logged-in-always-return-false
+https://learn.microsoft.com/en-us/aspnet/core/security/authentication/cookie?view=aspnetcore-7.0

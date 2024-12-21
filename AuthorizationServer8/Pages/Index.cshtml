@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment env
+@*@using Microsoft.AspNetCore.Hosting
+    if (env.IsProduction())
+        {
+           //You can also use:
+
+           //env.IsStaging();
+           //env.IsDevelopment();
+           //env.IsEnvironment("EnvironmentName");
+        }*@
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div id="body">
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>Welcome &hellip;</h1>
+            </hgroup>
+            <p>Environment: [@env.EnvironmentName]</p>
+            <p>
+                Please visit the API link above for testing &hellip;
+            </p>
+        </div>
+    </section>
+</div>

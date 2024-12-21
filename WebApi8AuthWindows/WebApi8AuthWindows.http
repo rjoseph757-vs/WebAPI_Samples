@@ -1,0 +1,6 @@
+@WebApi8AuthWindows_HostAddress = http://localhost:5182
+
+GET {{WebApi8AuthWindows_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

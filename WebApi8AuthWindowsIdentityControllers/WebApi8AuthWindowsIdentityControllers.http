@@ -1,0 +1,6 @@
+@WebApi8AuthWindowsIdentityControllers_HostAddress = http://localhost:5087
+
+GET {{WebApi8AuthWindowsIdentityControllers_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
